@@ -1,8 +1,10 @@
 class LinksController < ApplicationController
   def show
-    #show
+    @link = Link.find(params[:id])
+    @comment = Comment.new
   end
   def new
+    authenticate_user!
     @link = Link.new
   end
   def create

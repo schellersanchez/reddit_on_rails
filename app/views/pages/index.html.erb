@@ -3,7 +3,7 @@
 <%= link_to "Add Link", new_link_path %>
 <ul>
   <% @links.each do |link| %>
-      <li><%= link_to link.title, link.url %><br><%= link_to "comment", link_path(link.id) %> | (<%= link.url %>)</li>
+      <li><%= link_to link.title, "http://"+link.url %><br><%= link_to "comment", link_path(link.id) %> | (<%= link.url %>)</li>
   <% end %>
 </ul>
 
